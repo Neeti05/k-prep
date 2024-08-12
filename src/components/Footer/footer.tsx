@@ -5,8 +5,8 @@ import { FaPhone, FaEnvelope, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-
 const Footer: React.FC = () => {
   return (
     <div className={denkOne.className}>
-    <footer className="bg-purple-600 rounded-xl mt-8 text-white p-6 px-16">
-      <div className="container mx-auto flex justify-between">
+    <footer className="bg-purple-600 rounded-xl mt-8 text-white p-4 sm:p-6 sm:px-16">
+      <div className="container mx-auto flex justify-between px-3 sm:px-0">
         <div>
           <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
           <p className="flex items-center mb-2">
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             <li><a href="#" className="hover:underline">Newsletter</a></li>
           </ul>
         </div>
-        <div>
+        <div className='hidden sm:block'>
             <h3 className="text-lg font-semibold mb-2">Subscribe to our newsletter:</h3>
             <form action="#" method="POST">
                 <input type="email" placeholder="Enter your email" className="w-full p-2 text-black rounded-lg outline-none" />

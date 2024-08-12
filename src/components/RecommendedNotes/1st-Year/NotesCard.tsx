@@ -18,15 +18,15 @@ const Card: React.FC<CardProps> = ({ title, imageSrc, description, pdfUrl }) => 
   };
 
   return (
-    <div className="bg-recommended rounded-xl shadow-lg flex flex-col justify-center p-4 w-60 mx-2">
+    <div className="bg-recommended rounded-xl shadow-lg flex flex-col justify-center sm:p-4 p-2 w-48 sm:w-60 mx-2">
       <div className="h-48 w-full bg-gray-200 rounded-md mb-4 relative">
-        <Image src={imageSrc} alt={title} layout="fill" objectFit="cover" className="rounded-md" />
+        <Image src={imageSrc} alt={title} layout="fill" className="rounded-md" />
       </div>
-      <h2 className="text-xl font-bold mb-2">{title}</h2>
-      <p className="text-gray-700 mb-4">{description}</p>
+      <h2 className="sm:text-xl font-bold text-base mb-2">{title}</h2>
+      <p className="text-gray-700 text-sm sm:text-base mb-4">{description}</p>
       <button
         onClick={handleOpenPdf}
-        className="bg-[#843ab1] text-white px-4 py-1 rounded-full hover:bg-[#b864c8] text-center transition duration-300"
+        className="bg-[#843ab1] text-white sm:px-4 py-1 rounded-full hover:bg-[#b864c8] text-center transition duration-500"
       >
         Open PDF
       </button>
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="w-auto h-full overflow-x-auto border py-5 rounded-xl border-gray-300" style={{ scrollbarWidth: 'none' }}>
-      <div className="bg-[#f8e9f4] h-96 py-5 flex items-center">
+      <div className="bg-[#f8e9f48c] sm:h-96 sm:py-5 flex items-center">
         <main className="flex space-x-4">
           {resources.map((resource, index) => (
             <Card
